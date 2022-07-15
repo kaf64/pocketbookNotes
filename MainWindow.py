@@ -54,7 +54,7 @@ class MainWindow(tk.Frame):
         self.treeView = ttk.Treeview(self.treeviewFrame, columns=('page', 'note'), show='headings')
         self.treeView.grid(row=0, column=1, padx=5, pady=5, sticky='nswe')
         self.noteContent = tk.Text(self.master, state="disabled", wrap="word")
-        self.noteContent.grid(row=1, column=1, padx=5, pady=5, sticky='nswe', columnspan=2)
+        self.noteContent.grid(row=1, column=1, padx=5, pady=5, sticky='nswe')
         #scrollbar
         self.treeview_scrollbar_vertical = ttk.Scrollbar(self.treeviewFrame, orient='vertical')
         self.treeview_scrollbar_vertical.grid(row=0, column=0, sticky='ns')
