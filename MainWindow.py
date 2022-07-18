@@ -124,7 +124,7 @@ class MainWindow(tk.Frame):
     def refresh_treeview(self):
         self.treeView.destroy()
         self.treeView = ttk.Treeview(self.treeviewFrame, columns=('page', 'note'), show='headings')
-        self.treeView.bind("<Double-Button-1>", self.show_item)
+        self.treeView.bind("<<TreeviewSelect>>", self.show_item)
         self.treeView.configure(yscrollcommand=self.treeview_scrollbar_vertical.set)
         self.treeview_scrollbar_vertical.configure(command=self.treeView.yview)
         self.treeView.grid(row=0, column=1, padx=5, pady=5, sticky='nswe')
